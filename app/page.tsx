@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Badge } from "@/components/ui/badge"
+import FormWhatsApp from "@/components/ui/FormWhatsApp"
 import {
   Code2,
   Users,
@@ -342,8 +343,10 @@ export default function HomePage() {
           </div>
           <div className="text-center mt-8">
             <Button variant="outline" className="border-pink-300 text-pink-600 hover:bg-pink-50 bg-transparent">
-              <Instagram className="w-5 h-5 mr-2" />
-              Ver mais no Instagram
+              <Link href="https://instagram.com/li.code" className="flex flex-row" target="_blank" rel="noopener noreferrer">
+                <Instagram className="w-5 h-5 mr-2" />
+                Ver mais no Instagram
+              </Link>
             </Button>
           </div>
         </div>
@@ -364,9 +367,9 @@ export default function HomePage() {
           </div>
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              { name: "Ana Silva", role: "Presidente", area: "Engenharia de Software" },
-              { name: "Maria Santos", role: "Vice-Presidente", area: "Ciência de Dados" },
-              { name: "Julia Costa", role: "Diretora de Eventos", area: "UX/UI Design" },
+              { name: "Stheffany Santos", role: "Presidente", area: "Desenvolvimento Web" },
+              { name: "Rayellen", role: "Vice-Presidente", area: "Pesquisa Cientifica" },
+              { name: "Helena Carvalho", role: "Diretora de Pesquisa", area: "Pesquisa Cientifica" },
               { name: "Carla Oliveira", role: "Diretora de Projetos", area: "Desenvolvimento Web" },
             ].map((member, i) => (
               <Card key={i} className="text-center hover:shadow-lg transition-shadow">
@@ -439,30 +442,14 @@ export default function HomePage() {
                   </div>
                   <div>
                     <p className="font-medium">Localização</p>
-                    <p className="text-gray-600">Universidade Federal</p>
+                    <p className="text-gray-600">Universidade Tiradentes</p>
                   </div>
                 </div>
               </div>
             </div>
-            <Card>
-              <CardHeader>
-                <CardTitle>Envie uma mensagem</CardTitle>
-                <CardDescription>Preencha o formulário e entraremos em contato em breve</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <form className="space-y-4">
-                  <div className="grid grid-cols-2 gap-4">
-                    <Input placeholder="Nome" />
-                    <Input placeholder="E-mail" type="email" />
-                  </div>
-                  <Input placeholder="Assunto" />
-                  <Textarea placeholder="Sua mensagem" rows={4} />
-                  <Button className="w-full bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600">
-                    Enviar Mensagem
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+            <div>
+              <FormWhatsApp/>
+            </div>
           </div>
         </div>
       </section>
