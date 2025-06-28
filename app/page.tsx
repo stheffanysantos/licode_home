@@ -87,16 +87,20 @@ export default function HomePage() {
               size="lg"
               className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-lg px-8 py-3"
             >
-              Saiba Mais
-              <ArrowRight className="w-5 h-5 ml-2" />
+            <Link className="flex flex-row items-center" href="https://discord.gg/3DqKPjae" target="_blank" rel="noopener noreferrer">
+            Saiba Mais
+            <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
             </Button>
             <Button
               size="lg"
               variant="outline"
               className="additional-classes"
             >
-              <Instagram className="w-5 h-5 mr-2" />
-              Siga-nos
+              <Link className="flex flex-row items-center" href="https://instagram.com/li.code" target="_blank" rel="noopener noreferrer">
+                <Instagram className="w-5 h-5 mr-2" />
+                Siga-nos
+              </Link>
             </Button>
           </div>
         </div>
